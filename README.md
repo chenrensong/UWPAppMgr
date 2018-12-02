@@ -1,10 +1,12 @@
 # UWPAppMgr
 UWP Application Manager
 
-## 支持功能
-1、支持查看所有本机的UWP应用
+![UWPAppMgr ScreenShot](https://github.com/chenrensong/UWPAppMgr/blob/master/Images/screenshot.png?raw=true)
 
-2、支持卸载当前用户的UWP应用
+## 鏀寔鍔熻兘
+1銆佹敮鎸佹煡鐪嬫墍鏈夋湰鏈虹殑UWP搴旂敤
+
+2銆佹敮鎸佸嵏杞藉綋鍓嶇敤鎴风殑UWP搴旂敤
 
 ## TODO:
-1、支持删除其他用户的UWP应用 （可采用手动的方式直接删除指定目录）
+1銆佹敮鎸佸垹闄ゅ叾浠栫敤鎴风殑UWP搴旂敤 锛堝彲閲囩敤鎵嬪姩鐨勬柟寮忕洿鎺ュ垹闄ゆ寚瀹氱洰褰曪級
