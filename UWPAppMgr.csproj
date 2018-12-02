@@ -37,21 +37,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
-      <HintPath>..\packages\CommonServiceLocator.2.0.2\lib\net45\CommonServiceLocator.dll</HintPath>
+      <HintPath>.\packages\CommonServiceLocator.2.0.2\lib\net45\CommonServiceLocator.dll</HintPath>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+      <HintPath>.\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+      <HintPath>.\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+      <HintPath>.\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <HintPath>.\packages\MvvmLightLibs.5.4.1.1\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -118,14 +118,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\packages\UwpDesktop.10.0.14393.3\analyzers\dotnet\UwpDesktopAnalyzer.dll" />
+    <Analyzer Include=".\packages\UwpDesktop.10.0.14393.3\analyzers\dotnet\UwpDesktopAnalyzer.dll" />
+    <Analyzer Include="packages\UwpDesktop.10.0.14393.3\analyzers\dotnet\UwpDesktopAnalyzer.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\UwpDesktop.10.0.14393.3\build\portable-net45+uap\UwpDesktop.targets" Condition="Exists('..\packages\UwpDesktop.10.0.14393.3\build\portable-net45+uap\UwpDesktop.targets')" />
+  <Import Project=".\packages\UwpDesktop.10.0.14393.3\build\portable-net45+uap\UwpDesktop.targets" Condition="Exists('.\packages\UwpDesktop.10.0.14393.3\build\portable-net45+uap\UwpDesktop.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\UwpDesktop.10.0.14393.3\build\portable-net45+uap\UwpDesktop.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\UwpDesktop.10.0.14393.3\build\portable-net45+uap\UwpDesktop.targets'))" />
+    <Error Condition="!Exists('.\packages\UwpDesktop.10.0.14393.3\build\portable-net45+uap\UwpDesktop.targets')" Text="$([System.String]::Format('$(ErrorText)', '.\packages\UwpDesktop.10.0.14393.3\build\portable-net45+uap\UwpDesktop.targets'))" />
+    <Error Condition="!Exists('packages\UwpDesktop.10.0.14393.3\build\portable-net45+uap\UwpDesktop.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\UwpDesktop.10.0.14393.3\build\portable-net45+uap\UwpDesktop.targets'))" />
   </Target>
+  <Import Project="packages\UwpDesktop.10.0.14393.3\build\portable-net45+uap\UwpDesktop.targets" Condition="Exists('packages\UwpDesktop.10.0.14393.3\build\portable-net45+uap\UwpDesktop.targets')" />
 </Project>

@@ -243,3 +243,4 @@ tools/
 
 # SQLite files
 **/Data/*.db
+/packages
